@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Mail, Search } from "@mui/icons-material";
-import Badge from "@mui/material/Badge";
+import { Search, ShoppingCartOutlined } from "@mui/icons-material";
+import { Badge } from "@mui/material";
 
 const Container = styled.div`
   height: 60px;
@@ -51,11 +51,15 @@ const Logo = styled.h1`
 // right section
 const Right = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
+  margin-left: 25px;
 `;
 // ------
 
@@ -67,16 +71,18 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Sheikh.</Logo>
+          <Logo>Sheikh Commerce.</Logo>
         </Center>
         <Right>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <Mail color="action" />
+            <Badge badgeContent={2} color="primary">
+              <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
         </Right>
