@@ -2,3 +2,7 @@
   margin: 0;
   font-family: "Urbanist", sans-serif;
 }
+.MuiBadge-badge{
+  background-color: teal;
+  color: white;
+}

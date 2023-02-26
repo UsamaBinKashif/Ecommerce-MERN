@@ -13,7 +13,7 @@ const Container = styled.div`
 
 const Announcement = () => {
   return (
-    <Container>Super Deal! Free Shipping on Orders Over 10,000 PKR</Container>
+    <Container>NIKE! JUST DO IT</Container>
   );
 };
 

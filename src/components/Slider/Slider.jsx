@@ -1,15 +1,20 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
+import { useState } from "react";
 import styled from "styled-components";
-
+import { sliderItems } from "../../utils/data";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   position: relative;
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
+  transition: all 1s ease;
 `;
 
 const Slide = styled.div`
@@ -17,6 +22,7 @@ const Slide = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
   height: 100%;
@@ -32,9 +38,28 @@ const InfoContainer = styled.div`
   padding: 50px;
 `;
 
-const Title = styled.h1``;
-const Description = styled.p``;
-const Button = styled.button``;
+const Title = styled.h1`
+  font-size: 78px;
+`;
+const Description = styled.p`
+  margin: 50px 0;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`;
+
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: black;
+    color: white;
+
+  }
+`;
 
 const Arrow = styled.div`
   width: 50px;
@@ -52,22 +77,37 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.7;
+  z-index: 2;
 `;
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick("left")} title="left">
         <ArrowLeftOutlined />
       </Arrow>
-      <Wrapper>
-        <Slide>
-          <ImgContainer>
-            <Image src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/80baedf0-d6f5-4d35-b912-c7c40eeb0be0/invincible-3-womens-road-running-shoes-kC40R9.png" />
-          </ImgContainer>
-          <InfoContainer></InfoContainer>
-        </Slide>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide key={item.id}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Description>{item.desc}</Description>
+              <Button>Shop</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick("right")} title="right">
         <ArrowRightOutlined />
       </Arrow>
     </Container>

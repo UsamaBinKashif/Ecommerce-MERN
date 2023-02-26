@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
@@ -30,10 +29,15 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  border-radius: 5%;
+  background-color: #f9f9f9c7;
 `;
 
 const Input = styled.input`
   border: none;
+  background-color: transparent;
+  outline: none;
+
 `;
 // ------
 
@@ -71,17 +75,19 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search style={{ color: "gray", fontSize: 16 }} />
+            <Search
+              style={{ color: "gray", fontSize: 16, cursor: "pointer" }}
+            />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Sheikh Commerce.</Logo>
+          <Logo>NIKE.</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={2} color="primary">
+            <Badge badgeContent={1}>
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
