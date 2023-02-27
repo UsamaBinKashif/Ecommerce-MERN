@@ -3,7 +3,7 @@ import Announcement from "../../components/Announcement/Announcement";
 import Categories from "../../components/Categories/Categories";
 import Navbar from "../../components/Navbar/Navbar";
 import Slider from "../../components/Slider/Slider";
-import Video from "../../components/Video/Video";
+import Image from "../../components/Image/Image";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Navbar />
       <Slider />
       <Categories />
-      <Video />
+      <Image />
     </div>
   );
 };
