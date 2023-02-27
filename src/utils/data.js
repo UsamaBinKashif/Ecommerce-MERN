@@ -39,3 +39,21 @@ export const categories = [
     title: "KIDS",
   },
 ];
+
+export const popularProducts = [
+  {
+    id: 1,
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_399,c_limit/f1d83c67-588b-4de8-943c-560e2740072c/nike-just-do-it.jpg",
+    title: "Air Jordan 1",
+  },
+  {
+    id: 2,
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_399,c_limit/3a148c22-fa92-47fe-a4dd-783919e4eb85/nike-just-do-it.jpg",
+    title: "Air Force 1",
+  },
+  {
+    id: 3,
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_399,c_limit/cd2c0283-08eb-4628-a538-ee577b4c0aee/nike-just-do-it.jpg",
+    title: "Nike Blazer",
+  },
+];

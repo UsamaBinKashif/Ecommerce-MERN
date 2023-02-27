@@ -1,22 +1,44 @@
 import styled from "styled-components";
-import Photo from "../../assets/shoes.jpg";
 
-const Main = styled.div`
+const Container = styled.div`
   width: 100%;
   height: 100vh;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: teal;
+  color: white;
 `;
-
-const Image = styled.img`
-  width: 100%;
-  height: 50%;
+const InfoContainer = styled.div`
+  text-align: center;
+  padding: 20px;
+`;
+const Title = styled.h1`
+  font-size: 65px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+`;
+const Description = styled.p`
+  font-size: 24px;
 `;
 
 const Video = () => {
   return (
-    <Main>
-      <Image src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_952,c_limit/5e4a0ef7-a2c9-483a-8e5b-45d8277db19d/nike-just-do-it.jpg" />
-    </Main>
+    <Container>
+      <InfoContainer>
+        <Title>Focus Areas</Title>
+        <Description>
+          Our priorities include promoting diversity, equity and inclusion for
+          all advancing a transparent and responsible supply chain innovating
+          sustainable materials and methods of make that focus on our
+          environmental impact; building community by investing in organizations
+          focused on economic empowerment, and education and equality; and
+          bringing today’s generation together through sport and an active
+          lifestyle so they can reach their full potential tomorrow.
+        </Description>
+      </InfoContainer>
+    </Container>
   );
 };
 
