@@ -5,6 +5,9 @@ import Announcement from "./components/Announcement/Announcement";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Cart from "./pages/Cart/Cart";
 function App() {
   return (
     <div>
@@ -12,7 +15,10 @@ function App() {
       <Navbar />
       {/* <Home /> */}
       {/* <ProductList /> */}
-      <ProductDetail/>
+      {/* <ProductDetail/> */}
+      {/* <Login/> */}
+      {/* <Register/> */}
+      <Cart/>
       <Footer />
     </div>
   );
