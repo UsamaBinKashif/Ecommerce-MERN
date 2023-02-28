@@ -12,10 +12,12 @@ const InfoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
 `;
 const Image = styled.img`
   width: 75%;
   transition: all 0.3s ease;
+  cursor: pointer;
 `;
 const Container = styled.div`
   flex: 1;
@@ -26,6 +28,7 @@ const Container = styled.div`
   min-width: 280px;
   height: 350px;
   position: relative;
+  
 
   &:hover ${InfoContainer} {
     opacity: 1;

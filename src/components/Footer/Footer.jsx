@@ -1,8 +1,17 @@
-import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material";
+import {
+  Facebook,
+  Instagram,
+  MailOutline,
+  Phone,
+  Room,
+  Twitter,
+  YouTube,
+} from "@mui/icons-material";
 import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
+
 `;
 const Left = styled.div`
   flex: 1;
@@ -16,6 +25,7 @@ const Center = styled.div`
 `;
 const Right = styled.div`
   flex: 1;
+  padding: 20px;
 `;
 
 const Logo = styled.h1``;
@@ -64,6 +74,11 @@ const ListItem = styled.li`
   }
 `;
 
+const ContactItem = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
 const Footer = () => {
   return (
     <Container>
@@ -103,7 +118,19 @@ const Footer = () => {
           <ListItem>Terms</ListItem>
         </List>
       </Center>
-      <Right></Right>
+      <Right>
+        <Title>Contact</Title>
+        <ContactItem>
+          <Room style={{ marginRight: "10px" }} /> Pakistan
+        </ContactItem>
+        <ContactItem>
+          <Phone style={{ marginRight: "10px" }} /> +92 123456789
+        </ContactItem>
+        <ContactItem>
+          <MailOutline style={{ marginRight: "10px" }} />{" "}
+          usamabinkashif.98@gmail.com
+        </ContactItem>
+      </Right>
     </Container>
   );
 };

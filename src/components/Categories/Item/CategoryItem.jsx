@@ -6,6 +6,7 @@ const Container = styled.div`
   height: 50vh;
   position: relative;
   transition: transform 0.5s; /* Animation */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   cursor: pointer;
   &:hover {
