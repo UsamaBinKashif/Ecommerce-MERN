@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { popularProducts } from "../../utils/data";
 import Product from "./Product/Product";
+import { mobile } from "../../utils/responsive";
+
 const Container = styled.div`
   padding: 20px;
   display: flex;
@@ -8,6 +10,7 @@ const Container = styled.div`
 `;
 const ProductContainer = styled.div`
   display: flex;
+  ${mobile({ padding: "0px", flexDirection:"column" })}
 `;
 const Title = styled.h1`
   margin: 30px 0;

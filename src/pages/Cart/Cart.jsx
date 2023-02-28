@@ -29,9 +29,7 @@ const TopButton = styled.button`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
-const TopTexts = styled.div`
-  
-`;
+const TopTexts = styled.div``;
 const TopText = styled.span`
   text-decoration: underline;
   cursor: pointer;
@@ -41,8 +39,6 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-
-
 `;
 
 const Info = styled.div`
@@ -100,13 +96,11 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 5px;
-
 `;
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
- 
 `;
 
 const Hr = styled.hr`
@@ -150,7 +144,6 @@ const Button = styled.button`
 const Cart = () => {
   return (
     <Container>
-      
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
@@ -237,7 +230,6 @@ const Cart = () => {
           </Summary>
         </Bottom>
       </Wrapper>
-      
     </Container>
   );
 };

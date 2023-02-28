@@ -4,6 +4,7 @@ import {
   ShoppingCartOutlined,
 } from "@mui/icons-material";
 import styled from "styled-components";
+import { mobile } from "../../../utils/responsive";
 
 const InfoContainer = styled.div`
   position: absolute;
@@ -18,6 +19,8 @@ const Image = styled.img`
   width: 75%;
   transition: all 0.3s ease;
   cursor: pointer;
+  ${mobile({ height: "20vh" })}
+
 `;
 const Container = styled.div`
   flex: 1;
