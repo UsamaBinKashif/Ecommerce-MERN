@@ -81,7 +81,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>NIKE.</Logo>
+          <Logo>SHOES.</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>

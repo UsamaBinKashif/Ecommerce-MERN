@@ -9,7 +9,7 @@ export const sliderItems = [
   {
     id: 2,
     img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_691,c_limit/ea7d3b35-a1dc-49fd-82a6-ddeb4244c955/nike-just-do-it.jpg",
-    title: "NIKE STYLE",
+    title: "New Style",
     desc: "Creative Director, Cynthia Cervantes keeps 'em guessing with unexpected style choices. Shop her day-to-night looks.",
     bg: "fcf1ed",
   },

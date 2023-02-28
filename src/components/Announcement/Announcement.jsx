@@ -13,7 +13,7 @@ const Container = styled.div`
 
 const Announcement = () => {
   return (
-    <Container>NIKE! JUST DO IT</Container>
+    <Container>Shoes! JUST WEAR IT</Container>
   );
 };
 

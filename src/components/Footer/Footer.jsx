@@ -83,7 +83,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>NIKE. Impact Taking Action</Logo>
+        <Logo>Impact Taking Action</Logo>
         <Description>
           Our Purpose is to move the world forward. We take action by building
           community, protecting our planet and increasing access to sport.
