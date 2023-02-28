@@ -19,7 +19,7 @@ const Image = styled.img`
   width: 75%;
   transition: all 0.3s ease;
   cursor: pointer;
-  ${mobile({ height: "20vh" })}
+
 
 `;
 const Container = styled.div`
