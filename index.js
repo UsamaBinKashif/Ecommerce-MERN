@@ -15,6 +15,7 @@ app.use(express.json());
 
 //api routes
 const userRoute = require("./routes/User/user");
+const registerRoute = require("./routes/User/auth");
 const productRoute = require("./routes/Product/product");
 const cartRoute = require("./routes/Cart/cart");
 const orderRoute = require("./routes/Order/order");
@@ -22,6 +23,7 @@ const orderRoute = require("./routes/Order/order");
 
 //using routes on different api calls
 app.use("/api/users", userRoute);
+app.use("/api/users", registerRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
