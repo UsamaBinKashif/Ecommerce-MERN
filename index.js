@@ -22,7 +22,7 @@ const orderRoute = require("./routes/Order/order");
 //-----
 
 //using routes on different api calls
-app.use("/api/users", userRoute);
+// app.use("/api/users", userRoute);
 app.use("/api/users", registerRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);

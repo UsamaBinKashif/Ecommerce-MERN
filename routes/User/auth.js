@@ -1,20 +1,15 @@
+//express router to access the routes
 const router = require("express").Router();
-const User = require("../../models/User/user");
 
-//create a new user
-router.post("/register", async (req, res) => {
-  const newUser = new User({
-    username: req.body.username,
-    email: req.body.email,
-    password: req.body.password,
-  });
+const {
+  handleRegisterUser,
+  handleLoginUser,
+} = require("../../controllers/User/user");
 
-  try {
-    const user = await newUser.save();
+//create a new user route
+router.post("/register", handleRegisterUser);
 
-    res.send(user);
-  } catch (error) {
-    console.log(error);
-  }
-});
+//signin a user
+router.post("/login", handleLoginUser);
+
 module.exports = router;
