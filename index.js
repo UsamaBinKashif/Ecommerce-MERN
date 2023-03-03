@@ -5,16 +5,28 @@ const app = express();
 //-----
 
 //establishing connection with mongo db
-const { connectToDB } = require("./connection");
-connectToDB();
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+dotenv.config();
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("Connected");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
 //-----
 
 //middleware
 app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
 //-----
 
 //api routes
-const userRoute = require("./routes/User/user");
+// const userRoute = require("./routes/User/user");
 const registerRoute = require("./routes/User/auth");
 const productRoute = require("./routes/Product/product");
 const cartRoute = require("./routes/Cart/cart");
