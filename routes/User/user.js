@@ -1,7 +1,12 @@
+const {
+  handleUpdateUser,
+  handleDeleteUser,
+} = require("../../controllers/User/user");
+const { verifyToken, verifyTokenAndAuth } = require("../../service/auth");
+
 const router = require("express").Router();
 
-router.put("/:id", (req, res) => {
-  res.send("User Test");
-});
+router.put("/:id", verifyTokenAndAuth, handleUpdateUser);
 
+router.delete("/:id", verifyTokenAndAuth, handleDeleteUser);
 module.exports = router;

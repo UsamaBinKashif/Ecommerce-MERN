@@ -64,4 +64,36 @@ const handleLoginUser = async (req, res) => {
   }
 };
 
-module.exports = { handleRegisterUser, handleLoginUser };
+//update user
+const handleUpdateUser = async (req, res) => {
+  if (req.body.password) {
+    req.body.password = CryptoJS.AES.encrypt(
+      req.body.password,
+      process.env.PASS_SEC
+    ).toString();
+  }
+
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
+    );
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
+
+const handleDeleteUser = async (req, res) => {
+  try {
+    const user = await User.findByIdAndDelete(req.params.id);
+    res.status(200).json("User Deleted");
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
+
+module.exports = { handleRegisterUser, handleLoginUser, handleUpdateUser ,handleDeleteUser};
